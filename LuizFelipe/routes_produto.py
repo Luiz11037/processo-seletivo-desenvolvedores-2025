@@ -3,12 +3,10 @@ from app import app, db
 from models import Produto
 
 
-
 # Rota raiz
 @app.route("/")
 def home():
     return {"mensagem": "Bem Vindo a api-carrinho"}
-
 
 
 # Listar todos os produtos
@@ -28,7 +26,6 @@ def get_produtos():
             "descricao": p.descricao
         })
     return {"PRODUTOS": lista}
-
 
 
 # Criar novo produto
@@ -56,7 +53,6 @@ def post_produto():
     return {"mensagem": "Produto criado", "id": novo_produto.id}, 201
 
 
-
 # Buscar produto por ID
 @app.route("/produto/<int:id>/buscar")
 def get_produto_especifico(id):
@@ -73,7 +69,6 @@ def get_produto_especifico(id):
         "preco": produto.preco,
         "descricao": produto.descricao
     }
-
 
 
 # Atualizar produto

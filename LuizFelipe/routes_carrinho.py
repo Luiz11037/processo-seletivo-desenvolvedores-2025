@@ -4,7 +4,6 @@ from models import Carrinho, Produto
 from routes_produto import *
 
 
-
 #Mostrar Carrinho
 @app.route("/carrinho", methods=["GET"])
 def get_carrinho():
@@ -27,7 +26,6 @@ def get_carrinho():
     return {"carrinho": resultado, "valor_total": valor_total}
 
 
-
 #Colocar porduto dentro de carrinho
 @app.route("/carrinho/addProduto/<int:id>", methods=["POST"])
 def adicionar_produto_carrinho(id):
@@ -42,7 +40,6 @@ def adicionar_produto_carrinho(id):
     db.session.commit()
 
     return {"mensagem": f"{produto.nome} adicionado ao carrinho"}
-
 
 
 #Limpar carrinho

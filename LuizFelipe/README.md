@@ -1,5 +1,5 @@
 # api-carrinho - Luiz Felipe
-Criar tabela produtos
+Criar tabela Produto
 adicionar próprio usuário e senha em app.py
 ## Time
 Quero entrar no time Backend.
